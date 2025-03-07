@@ -31,7 +31,6 @@ function getWeather() {
         .then(data => {
             // Set current date
             const dateElement = document.getElementById('currentDate');
-            // const options = {  };
             const currentDate = new Date().toLocaleDateString();
             dateElement.textContent = currentDate;
 
@@ -51,9 +50,6 @@ function getWeather() {
 
             // Show weather info
             weatherInfo.classList.add('active');
-
-            // Clear input field
-            // inputValue.value = '';
         })
         .catch(error => {
             showError(error.message);
